@@ -7,64 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
-  
+
 </head>
 
 <body>
     <header>
-        
+
         <div class="logo">
             <h3>MyWeatherApp</h3>
         </div>
-        <div class="unplash-text">
+        <div class="unsplash-text">
             Fotografia por <span id="photographer-user"><a href='#'>user</a></span> em <a href='#'>Unsplash</a>
         </div>
-        
+
     </header>
     <div class='container'>
-        
+
         <div class='main'>
             <img id="weather-icon" src="" alt="icon">
             <h2 id="weather" class='medium-weight'>Current Weather</h2>
             <h4 id="location" class='medium-weight'>Current Location</h4>
             <h1 id="temperature"><span id='value'>Carregando...</span> °<span class='degree'>C</span> </h1>
-            <button id='btn'>Convert</button>
+
+            <div class="convert-box">
+                
+                <input type="checkbox" class='toggle-button' id='toggle-button'>
+                <label>Converter temperatura</label>
+            </div>
+
+
+
+            <!-- Select 
             <select name="locations" id="locations-select">
                 <option value="sp">São Paulo</option>
                 <option value="saab">Rio de Janeiro</option>
                 <option value="mercedes">Tóquio</option>
                 <option value="audi">Nova Iorque</option>
                 <option value="audi">Quebec</option>
-                
             </select>
+            -->
         </div>
         <div class='other-infos'>
-            <div>
-                <h4 class='medium-weight'>Humidade</h4>
-                <h2><span id='humidity'>Value</span>%</h2>
+            <div class='info-box'>
+                <h5>Humidade</h5>
+                <h3><span id='humidity'>Value</span>%</h3>
             </div>
-            <div>
-                <h4 class='medium-weight'>Pressão do Ar</h4>
-                <h2><span id='pressure'>Value</span> PS</h2>
+            <div class='info-box'>
+                <h5>Pressão do Ar</h5>
+                <h3><span id='pressure'>Value</span> PS</h3>
             </div>
-            <div>
-                <h4 class='medium-weight'>Sensação Térmica</h4>
-                <h2><span id='feels-like'>Value</span>°<span class='degree'>C</span></h2>
+            <div class='info-box'>
+                <h5>Sensação Térmica</h5>
+                <h3><span id='feels-like'>Value</span>°<span class='degree'>C</span></h3>
             </div>
-            <div>
-                <h4 class='medium-weight'>Velocidade do Vento</h4>
-                <h2><span id='wind'>Value</span> km/h</h2>
+            <div class='info-box'>
+                <h5>Velocidade do Vento</h5>
+                <h3><span id='wind'>Value</span> km/h</h3>
             </div>
         </div>
         <div class="break"></div>
-        <div>
-            Em breve...
-        </div>
+
     </div>
 
-    
+
     <footer>
-        © <span id='footer-year'>Carregando...</span> Henry Medeiros. 
+        © <span id='footer-year'>Carregando...</span> Henry Medeiros.
     </footer>
 
 

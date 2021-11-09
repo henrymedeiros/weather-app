@@ -9,6 +9,7 @@ const humidityElement = document.querySelector("#humidity");
 const pressureElement = document.querySelector("#pressure");
 const feelsLikeElement = document.querySelector("#feels-like");
 const windElement = document.querySelector("#wind");
+const toggleButton = document.querySelector("#toggle-button");
 
 // Footer Elements
 const footerYear = document.querySelector("#footer-year");
@@ -18,15 +19,16 @@ const btn = document.querySelector("#btn");
 let temperature = {
     value: null,
     feels_like: null,
-    currentDegree: "C",
+    currentDegree: null,
 };
 
-btn.addEventListener("click", () => {
-    if (temperature.currentDegree == "C") {
+
+toggleButton.addEventListener("click", () => {
+    if(toggleButton.checked){
         temperature.value = Math.round(temperature.value * (9 / 5) + 32);
         temperature.feels_like = Math.round(temperature.feels_like * (9 / 5) + 32);
         temperature.currentDegree = "F";
-    } else if (temperature.currentDegree == "F") {
+    }else{
         temperature.value = Math.round((temperature.value - 32) * (5 / 9));
         temperature.feels_like = Math.round((temperature.feels_like - 32) * (5 / 9));
         temperature.currentDegree = "C";
@@ -37,8 +39,7 @@ btn.addEventListener("click", () => {
     document.querySelectorAll(".degree").forEach(function (el) {
         el.innerText = temperature.currentDegree;
     });
-});
-
+})
 
 
 function getLocation() {
@@ -110,7 +111,7 @@ function successCall(position) {
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
-                const randomNumber = getRandomInt(0,3)
+                const randomNumber = getRandomInt(0,2)
                 photographerUsername.innerHTML= `<a href="${json.results[randomNumber].user.links.html}">${json.results[randomNumber].user.username}</a>`
                 document.body.style.backgroundImage = `linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url(${json.results[randomNumber].urls.full})`
             })
@@ -132,6 +133,5 @@ function getRandomInt(min, max) {
   }
 
 getLocation();
-
 footerYear.innerText = currentYear()
 

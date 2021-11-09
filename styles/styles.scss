@@ -5,7 +5,9 @@
     margin: 0;
     padding: 0;
 }
-
+h5{
+    font-size: 1.25rem;
+}
 h4{
     font-size:1.55rem;
 }
@@ -16,7 +18,8 @@ h2{
     font-size: 2.4rem;
 }
 h1{
-    font-size: 3rem;
+    font-size: 4rem;
+    line-height: (4rem*1.25)
 }
 
 body {
@@ -34,6 +37,10 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 1rem 3.5rem;
+        .unsplash-text a{
+            color:#ff002f;
+            text-decoration: underline;
+        }
     
     }
 
@@ -42,17 +49,72 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 1rem 3.5rem;
+        
         .main {
+            #weather-icon{
+                width: 72px;
+            }
+            
             #weather {
                 text-transform: capitalize;
             }
             #location {
                 font-weight: 600;
+                margin-bottom: 1.25rem;
+            }
+            #temperature{
+                margin-bottom: .75rem;
+            }
+            .convert-box{
+                display: flex;
+                align-items: center;
+                .toggle-button{
+                    width: 80px;
+                    height: 40px;
+                    appearance: none;
+                    background: #c6c6c6;
+                    outline: none;
+                    border-radius: 20px;
+                    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+                    transition: .5s;
+                    position: relative;
+                    margin-right: 1.5rem;
+                }
+                .toggle-button:checked{
+                    background-color: #ff002f;
+                }
+                .toggle-button::before{
+                    content: '';
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    border-radius:50%;
+                    top: 0;
+                    left: 0;
+                    background-color: #fff;
+                    transform: scale(1.05);
+                    box-shadow:  02px 3px rgba(0, 0, 0, 0.3);
+                    transition: .3s
+                }
+                .toggle-button:checked::before{
+                    left: 40px;
+                }
+
+                label{
+                    text-decoration: underline;
+                    font-weight: 600;
+                }
             }
         }
         .other-infos{
             h2{
                 //color:#ff002f;
+            }
+            h5{
+                font-weight: 400;
+            }
+            .info-box{
+                margin-bottom: 2.25rem;
             }
         }
     }
