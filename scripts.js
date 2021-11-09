@@ -39,6 +39,8 @@ btn.addEventListener("click", () => {
     });
 });
 
+
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(successCall, errorCall);
@@ -98,17 +100,19 @@ function successCall(position) {
         feelsLikeElement.innerText = temperature.feels_like;
         windElement.innerText = json.wind.speed;
         weatherIcon.src = json.weather[0].icon;
+        console.log(json)
 
         // Unsplash Fetch Images from using city info provided by Weather API
-        let unsplash_url = `https://api.unsplash.com/search/photos?query=${json.name}&client_id=CGGVJAR3dbnP9OS9KHW_lJdHhX_eLYUwD59uU1pf4KU`;
+        let unsplash_url = `https://api.unsplash.com/search/photos?query=${json.name}%20city&client_id=CGGVJAR3dbnP9OS9KHW_lJdHhX_eLYUwD59uU1pf4KU`;
         fetch(unsplash_url, {
             method: "GET",
         })
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
-                photographerUsername.innerHTML= `<a href="${json.results[0].user.links.html}">${json.results[0].user.username}</a>`
-                document.body.style.backgroundImage = `linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url(${json.results[0].urls.full})`
+                const randomNumber = getRandomInt(0,3)
+                photographerUsername.innerHTML= `<a href="${json.results[randomNumber].user.links.html}">${json.results[randomNumber].user.username}</a>`
+                document.body.style.backgroundImage = `linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url(${json.results[randomNumber].urls.full})`
             })
             .catch((err) => {
                 console.error(err);
@@ -120,6 +124,12 @@ function currentYear(){
     time = new Date();
     return year = time.getFullYear();
 }
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
 getLocation();
 
