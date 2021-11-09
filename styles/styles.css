@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 1.55rem;
+}
+
+h3 {
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+body {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)))), url("https://images2.alphacoders.com/941/thumb-1920-941898.jpg") no-repeat center center fixed;
+  background: linear-gradient(linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7))), url("https://images2.alphacoders.com/941/thumb-1920-941898.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 3.5rem;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 3.5rem;
+}
+
+body .container .main #weather {
+  text-transform: capitalize;
+}
+
+body .container .main #location {
+  font-weight: 600;
+}
+
+body .container .other-infos h2 {
+  color: #ff002f;
+}
+
+body footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+.medium-weight {
+  font-weight: 500 !important;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
+}
+/*# sourceMappingURL=styles.css.map */
