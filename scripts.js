@@ -1,3 +1,5 @@
+// Header Elements 
+const photographerUsername = document.querySelector("#photographer-user")
 // Elements
 const weatherIcon = document.querySelector("#weather-icon")
 const weatherElement = document.querySelector("#weather");
@@ -10,7 +12,6 @@ const windElement = document.querySelector("#wind");
 
 // Footer Elements
 const footerYear = document.querySelector("#footer-year");
-
 const btn = document.querySelector("#btn");
 
 // Temperature & Converter Function
@@ -106,6 +107,7 @@ function successCall(position) {
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
+                photographerUsername.innerHTML= `<a href="${json.results[0].user.links.html}">${json.results[0].user.username}</a>`
                 document.body.style.backgroundImage = `linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url(${json.results[0].urls.full})`
             })
             .catch((err) => {
@@ -120,5 +122,6 @@ function currentYear(){
 }
 
 getLocation();
+
 footerYear.innerText = currentYear()
 

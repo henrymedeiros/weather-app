@@ -65,10 +65,6 @@ body .container .main #location {
   font-weight: 600;
 }
 
-body .container .other-infos h2 {
-  color: #ff002f;
-}
-
 body footer {
   position: fixed;
   left: 0;
