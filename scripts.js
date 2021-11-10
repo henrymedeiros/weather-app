@@ -76,6 +76,8 @@ function successCall(position) {
         longitude: position.coords.longitude,
     };
     // Get Weather using coordinates
+    console.log(position.coords.latitude)
+    console.log(position.coords.longitude)
     const url = `https://fcc-weather-api.glitch.me/api/current?lat=${coordinates.latitude}&lon=${coordinates.longitude}`;
     const fetchData = (url) => {
         fetch(url, {
