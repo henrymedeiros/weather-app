@@ -50,6 +50,20 @@ body header {
   padding: 1rem 3.5rem;
 }
 
+body header .logo {
+  font-size: 1.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .logo .material-icons-round {
+  margin-right: 1rem;
+}
+
 body header .unsplash-text a {
   color: #ff002f;
   text-decoration: underline;

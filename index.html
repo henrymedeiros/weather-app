@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <title>MyWeatherApp - Clima da sua região</title>
 
 </head>
 
@@ -14,7 +20,13 @@
     <header>
 
         <div class="logo">
-            <h3>MyWeatherApp</h3>
+            <span class="material-icons-round">
+                cloud
+            </span>
+            <h3>
+
+                MyWeatherApp
+            </h3>
         </div>
         <div class="unsplash-text">
             Fotografia por <span id="photographer-user"><a href='#'>user</a></span> em <a href='#'>Unsplash</a>
@@ -30,7 +42,7 @@
             <h1 id="temperature"><span id='value'>Carregando...</span> °<span class='degree'>C</span> </h1>
 
             <div class="convert-box">
-                
+
                 <input type="checkbox" class='toggle-button' id='toggle-button'>
                 <label>Converter temperatura</label>
             </div>
