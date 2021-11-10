@@ -5,21 +5,21 @@
     margin: 0;
     padding: 0;
 }
-h5{
+h5 {
     font-size: 1.25rem;
 }
-h4{
-    font-size:1.55rem;
+h4 {
+    font-size: 1.55rem;
 }
-h3{
+h3 {
     font-size: 1.9rem;
 }
-h2{
+h2 {
     font-size: 2.4rem;
 }
-h1{
+h1 {
     font-size: 4rem;
-    line-height: (4rem*1.25)
+    line-height: (4rem * 1.25);
 }
 
 body {
@@ -31,12 +31,12 @@ body {
     font-size: 1rem;
     color: #fff;
 
-    header{
-        .logo{
+    header {
+        .logo {
             font-size: 1.9rem;
             display: flex;
             align-items: center;
-            .material-icons-round{
+            .material-icons-round {
                 margin-right: 1rem;
             }
         }
@@ -44,11 +44,10 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 1rem 3.5rem;
-        .unsplash-text a{
-            color:#ff002f;
+        .unsplash-text a {
+            color: #ff002f;
             text-decoration: underline;
         }
-    
     }
 
     .container {
@@ -56,12 +55,12 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 1rem 3.5rem;
-        
+
         .main {
-            #weather-icon{
+            #weather-icon {
                 width: 72px;
             }
-            
+
             #weather {
                 text-transform: capitalize;
             }
@@ -69,13 +68,13 @@ body {
                 font-weight: 600;
                 margin-bottom: 1.25rem;
             }
-            #temperature{
-                margin-bottom: .75rem;
+            #temperature {
+                margin-bottom: 0.75rem;
             }
-            .convert-box{
+            .convert-box {
                 display: flex;
                 align-items: center;
-                .toggle-button{
+                .toggle-button {
                     width: 80px;
                     height: 40px;
                     appearance: none;
@@ -83,44 +82,44 @@ body {
                     outline: none;
                     border-radius: 20px;
                     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
-                    transition: .5s;
+                    transition: 0.5s;
                     position: relative;
                     margin-right: 1.5rem;
                 }
-                .toggle-button:checked{
+                .toggle-button:checked {
                     background-color: #ff002f;
                 }
-                .toggle-button::before{
-                    content: '';
+                .toggle-button::before {
+                    content: "";
                     position: absolute;
                     width: 40px;
                     height: 40px;
-                    border-radius:50%;
+                    border-radius: 50%;
                     top: 0;
                     left: 0;
                     background-color: #fff;
                     transform: scale(1.05);
-                    box-shadow:  02px 3px rgba(0, 0, 0, 0.3);
-                    transition: .3s
+                    box-shadow: 02px 3px rgba(0, 0, 0, 0.3);
+                    transition: 0.3s;
                 }
-                .toggle-button:checked::before{
+                .toggle-button:checked::before {
                     left: 40px;
                 }
 
-                label{
+                label {
                     text-decoration: underline;
                     font-weight: 600;
                 }
             }
         }
-        .other-infos{
-            h2{
+        .other-infos {
+            h2 {
                 //color:#ff002f;
             }
-            h5{
+            h5 {
                 font-weight: 400;
             }
-            .info-box{
+            .info-box {
                 margin-bottom: 2.25rem;
             }
         }
@@ -143,4 +142,4 @@ body {
 .break {
     flex-basis: 100%;
     height: 0;
-  }
+}

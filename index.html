@@ -1,95 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/styles.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
+        <!-- Google Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+                <!-- Title -->
+        <title>MyWeatherApp - Clima da sua região</title>
+    </head>
 
-    <!-- https://material.io/resources/icons/?style=round -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
-    <title>MyWeatherApp - Clima da sua região</title>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                <span class="material-icons-round"> cloud </span>
+                <h3>MyWeatherApp</h3>
+            </div>
+            <div class="unsplash-text">
+                Fotografia por <span id="photographer-user"><a href="#">Usuário</a></span> em <a href="#">Unsplash</a>
+            </div>
+        </header>]
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+            <div class="main">
+                <img id="weather-icon" src="" alt="icone-clima" />
+                <h2 id="weather" class="medium-weight">Carregando clima...</h2>
+                <h4 id="location" class="medium-weight">Carregando localização...</h4>
+                <h1 id="temperature"><span id="value">Carregando...</span> °<span class="degree">C</span></h1>
 
-</head>
-
-<body>
-    <header>
-
-        <div class="logo">
-            <span class="material-icons-round">
-                cloud
-            </span>
-            <h3>
-
-                MyWeatherApp
-            </h3>
+                <div class="convert-box">
+                    <input type="checkbox" class="toggle-button" id="toggle-button" />
+                    <label>Converter temperatura</label>
+                </div>
+            </div>
+            <div class="other-infos">
+                <div class="info-box">
+                    <h5>Humidade</h5>
+                    <h3><span id="humidity">Carregando...</span>%</h3>
+                </div>
+                <div class="info-box">
+                    <h5>Pressão do Ar</h5>
+                    <h3><span id="pressure">Carregando...</span> PS</h3>
+                </div>
+                <div class="info-box">
+                    <h5>Sensação Térmica</h5>
+                    <h3><span id="feels-like">Carregando...</span>°<span class="degree">C</span></h3>
+                </div>
+                <div class="info-box">
+                    <h5>Velocidade do Vento</h5>
+                    <h3><span id="wind">Carregando...</span> km/h</h3>
+                </div>
+            </div>
+            <div class="break"></div>
         </div>
-        <div class="unsplash-text">
-            Fotografia por <span id="photographer-user"><a href='#'>Usuário</a></span> em <a href='#'>Unsplash</a>
-        </div>
+        <!-- FOOTER -->
+        <footer>© <span id="footer-year">Carregando...</span> Henry Medeiros.</footer>
 
-    </header>
-    <div class='container'>
-
-        <div class='main'>
-            <img id="weather-icon" src="" alt="icone-clima">
-            <h2 id="weather" class='medium-weight'>Carregando clima...</h2>
-            <h4 id="location" class='medium-weight'>Carregando localização...</h4>
-            <h1 id="temperature"><span id='value'>Carregando...</span> °<span class='degree'>C</span> </h1>
-
-            <div class="convert-box">
-
-                <input type="checkbox" class='toggle-button' id='toggle-button'>
-                <label>Converter temperatura</label>
-            </div>
-
-
-
-            <!-- Select 
-            <select name="locations" id="locations-select">
-                <option value="sp">São Paulo</option>
-                <option value="saab">Rio de Janeiro</option>
-                <option value="mercedes">Tóquio</option>
-                <option value="audi">Nova Iorque</option>
-                <option value="audi">Quebec</option>
-            </select>
-            -->
-        </div>
-        <div class='other-infos'>
-            <div class='info-box'>
-                <h5>Humidade</h5>
-                <h3><span id='humidity'>Carregando...</span>%</h3>
-            </div>
-            <div class='info-box'>
-                <h5>Pressão do Ar</h5>
-                <h3><span id='pressure'>Carregando...</span> PS</h3>
-            </div>
-            <div class='info-box'>
-                <h5>Sensação Térmica</h5>
-                <h3><span id='feels-like'>Carregando...</span>°<span class='degree'>C</span></h3>
-            </div>
-            <div class='info-box'>
-                <h5>Velocidade do Vento</h5>
-                <h3><span id='wind'>Carregando...</span> km/h</h3>
-            </div>
-        </div>
-        <div class="break"></div>
-
-    </div>
-
-
-    <footer>
-        © <span id='footer-year'>Carregando...</span> Henry Medeiros.
-    </footer>
-
-
-
-    <script src='scripts.js'></script>
-    <script src='scripts/location.js'></script>
-</body>
-
+        <script src="scripts.js"></script>
+       
+    </body>
 </html>
