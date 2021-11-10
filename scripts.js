@@ -22,9 +22,12 @@ let temperature = {
     currentDegree: null,
 };
 
-
+// Trigger Convert Temperature Function 
 toggleButton.addEventListener("click", () => {
-    if(toggleButton.checked){
+    if(temperature.value==null) {
+        return;
+    }
+    else if(toggleButton.checked){
         temperature.value = Math.round(temperature.value * (9 / 5) + 32);
         temperature.feels_like = Math.round(temperature.feels_like * (9 / 5) + 32);
         temperature.currentDegree = "F";
@@ -50,6 +53,8 @@ function getLocation() {
     }
 }
 
+
+// Treat geolocation errors
 function errorCall(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
@@ -67,11 +72,13 @@ function errorCall(error) {
     }
 }
 
+// 
 function successCall(position) {
     let coordinates = {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
     };
+    // Get Weather using coordinates 
     const url = `https://fcc-weather-api.glitch.me/api/current?lat=${coordinates.latitude}&lon=${coordinates.longitude}`;
     const fetchData = (url) => {
         fetch(url, {
@@ -112,6 +119,7 @@ function successCall(position) {
             .then((json) => {
                 console.log(json);
                 const randomNumber = getRandomInt(0,2)
+                // get a random img
                 photographerUsername.innerHTML= `<a href="${json.results[randomNumber].user.links.html}">${json.results[randomNumber].user.username}</a>`
                 document.body.style.backgroundImage = `linear-gradient(rgba(4,9,30, 0.7), rgba(4,9,30, 0.7)), url(${json.results[randomNumber].urls.full})`
             })
@@ -125,6 +133,7 @@ function currentYear(){
     time = new Date();
     return year = time.getFullYear();
 }
+footerYear.innerText = currentYear()
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -133,5 +142,5 @@ function getRandomInt(min, max) {
   }
 
 getLocation();
-footerYear.innerText = currentYear()
+
 
